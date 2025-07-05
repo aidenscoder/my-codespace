@@ -1,7 +1,6 @@
 {
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
-        "typescript": "tsc main.ts && node main.js"
+        "typescript": "tsc src/main.ts && node src/main.js"
     }
-
 }
