@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "canvas": "^3.1.2",
-    "matter-js": "^0.20.0"
-  },
-  "devDependencies": {
-    "@types/matter-js": "^0.19.8"
-  }
-}
