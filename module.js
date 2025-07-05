@@ -5,7 +5,7 @@ export const input = (message) => {
         input: process.stdin,
         output: process.stdout
     });
-    
+
     rl.question(message,(answer) => {
       rl.close();
       return answer;
