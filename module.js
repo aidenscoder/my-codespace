@@ -7,7 +7,10 @@ export const input = (message,script) => {
     });
 
     rl.question(message,(answer) => {
-      script(answer);
+      if (answer != ""){
+        script(answer);
+        rl.close();
+      }
       rl.close();
     });
 };
