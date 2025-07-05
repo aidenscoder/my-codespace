@@ -1,12 +1,18 @@
-import { stdin, stdout } from "process";
-import { createInterface } from "readline";
+import { Engine, World, Bodies } from "matter-js";
 
-const rl = createInterface(stdin,stdout);
+// Create engine
+const engine = Engine.create();
 
-rl.question("whats your name:",
-    (answer) => {
-        console.log(`hello,${answer}`);
-    }
-);
+// Create bodies
+const box = Bodies.rectangle(400, 200, 80, 80);
+const ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
 
-console.log("jkw");
+// Add bodies to the world
+World.add(engine.world, [box, ground]);
+
+// Run the engine manually in a loop
+setInterval(() => {
+  Engine.update(engine, 1000 / 60);
+  console.log(`Box position: x=${box.position.x.toFixed(2)}, y=${box.position.y.toFixed(2)}`);
+}, 1000 / 60);
+
