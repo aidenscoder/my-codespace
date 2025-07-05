@@ -1,13 +1,11 @@
-class point {
-    constructor(x,y) {
-        this.x = x;
-        this.y = y;
-    }
+import { createInterface } from 'readline';
 
-    print_points() {
-        return [this.x, this.y];
-    }
-}
+const rl = createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-let my_point = point(1,2);
-console.log(`${my_point.print_points()}`);
+rl.question("What's your name? ", (answer) => {
+  console.log(`Hello, ${answer}!`);
+  rl.close();
+});
