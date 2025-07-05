@@ -1,1 +1,4 @@
-console.log("hello world");
+import {input} from "../my-codespace/module";
+
+let name = input("your name:");
+console.log(`hello,${name}!`);
