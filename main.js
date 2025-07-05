@@ -5,7 +5,3 @@ var module_1 = require("../my-codespace/module");
 (0, module_1.input)("your name:", function (answer) {
     console.log("Hello, ".concat(answer));
 });
-var my_list = [12, 3, 4, 56];
-for (var x in my_list) {
-    console.log(x);
-}

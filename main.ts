@@ -6,3 +6,5 @@ input("your name:",
         console.log(`Hello, ${answer}`);
     }
 );
+
+console.log("ewkdqo");
