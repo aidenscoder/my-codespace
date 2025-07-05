@@ -2,7 +2,7 @@
 import {input} from "../my-codespace/module";
 
 let name = input("your name:",
-    (answer) => {
+    (answer:string) => {
         console.log(`Hello, ${answer}`);
     }
 );
