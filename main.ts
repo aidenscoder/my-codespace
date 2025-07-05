@@ -1,10 +1,12 @@
-//tsc main.ts & main.js
-import {input} from "../my-codespace/module";
+import { stdin, stdout } from "process";
+import { createInterface } from "readline";
 
-input("your name:",
-    (answer:string) => {
-        console.log(`Hello, ${answer}`);
+const rl = createInterface(stdin,stdout);
+
+rl.question("whats your name:",
+    (answer) => {
+        console.log(`hello,${answer}`);
     }
 );
 
-console.log("ewkdqo");
+console.log("jkw");
