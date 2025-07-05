@@ -7,7 +7,8 @@ const rl = createInterface({
 });
 
 export const input = (message) => {
-    rl.question(message,(answer) => {return answer});
+    rl.question(message,(answer) => {
+      rl.close();
+      return answer;
+    });
 };
-
-input;
