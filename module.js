@@ -1,6 +1,6 @@
 import { createInterface } from "readline";
 
-export const input = (message) => {
+export const input = (message,script) => {
     const rl = createInterface({
         input: process.stdin,
         output: process.stdout
@@ -8,6 +8,6 @@ export const input = (message) => {
 
     rl.question(message,(answer) => {
       rl.close();
-      return answer;
+      script(answer)
     });
 };
