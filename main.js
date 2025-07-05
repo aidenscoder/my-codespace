@@ -2,4 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 //tsc main.ts & main.js
 var module_1 = require("../my-codespace/module");
-var name = (0, module_1.input)("your name:");
+(0, module_1.input)("your name:", function (answer) {
+    console.log("Hello, ".concat(answer));
+});
+var my_list = [12, 3, 4, 56];
+for (var x in my_list) {
+    console.log(x);
+}

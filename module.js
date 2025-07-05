@@ -7,7 +7,7 @@ export const input = (message,script) => {
     });
 
     rl.question(message,(answer) => {
+      script(answer);
       rl.close();
-      script(answer)
     });
 };
