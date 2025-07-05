@@ -1,18 +1,7 @@
-import { Engine, World, Bodies } from "matter-js";
+import { createCanvas } from "canvas";
 
-// Create engine
-const engine = Engine.create();
+let screen = createCanvas(800,600);
+let draw = screen.getContext('2d');
 
-// Create bodies
-const box = Bodies.rectangle(400, 200, 80, 80);
-const ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
-
-// Add bodies to the world
-World.add(engine.world, [box, ground]);
-
-// Run the engine manually in a loop
-setInterval(() => {
-  Engine.update(engine, 1000 / 60);
-  console.log(`Box position: x=${box.position.x.toFixed(2)}, y=${box.position.y.toFixed(2)}`);
-}, 1000 / 60);
-
+draw.fillStyle = 'blue';
+draw.fillRect(400,300,50,50);
